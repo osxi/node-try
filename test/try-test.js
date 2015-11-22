@@ -10,8 +10,12 @@ var fooBarObject = {
 var emptyObject = {};
 
 var objectWithMethod = {
-  foo: function() {
-    return 'foo';
+  foo: function(message) {
+    if (!!!message) {
+      return 'foo';
+    }
+
+    return 'foo' + message;
   }
 };
 
@@ -35,7 +39,11 @@ describe('node-try', function() {
     expect(result).to.be.empty;
   });
 
-  it('evaluates a function when tried', function() {
+  it('evaluates method when tried', function() {
     expect(objectWithMethod.nodeTry('foo')).to.eql('foo');
+  });
+
+  it('evaluates method with passed arguments', function() {
+    expect(objectWithMethod.nodeTry('foo', ['bar'])).to.eql('foobar');
   });
 });
