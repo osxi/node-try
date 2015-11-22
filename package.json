@@ -1,0 +1,28 @@
+{
+  "name": "node-try",
+  "version": "0.0.1",
+  "description": "Try for Node, based on Ruby's try",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -c -s 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osxi/node-try.git"
+  },
+  "keywords": [
+    "node",
+    "try",
+    "ruby",
+    "javascript"
+  ],
+  "author": "osxi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osxi/node-try/issues"
+  },
+  "homepage": "https://github.com/osxi/node-try#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
+}
