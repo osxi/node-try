@@ -1,4 +1,4 @@
-var assert  = require('assert');
+var expect  = require('chai').expect;
 var nodeTry = require('../index.js');
 
 var fooBarObject = {
@@ -10,26 +10,22 @@ var fooBarObject = {
 var emptyObject = {};
 
 describe('node-try', function() {
-  it('test suite works', function() {
-    assert.equal(true, true);
-  });
-
   it('returns request if it exists', function() {
-    assert.equal(fooBarObject.foo.nodeTry('bar'), true);
+    expect(fooBarObject.foo.nodeTry('bar')).to.eql(true);
   });
 
   it('returns {} when request is undefined', function() {
-    assert.equal(emptyObject.nodeTry('foo').constructor.name, 'Object');
+    expect(emptyObject.nodeTry('foo')).to.be.an('object');
   });
 
   it('existing chained request works', function() {
-    assert.equal(fooBarObject.nodeTry('foo').nodeTry('bar'), true);
+    expect(fooBarObject.nodeTry('foo').nodeTry('bar')).to.eql(true);
   });
 
   it('returns {} for undefined while deep chaining', function() {
     var result = emptyObject.nodeTry('foo').nodeTry('bar');
 
-    assert.equal(result.constructor.name, 'Object');
-    assert.equal(Object.keys(result), 0);
+    expect(result).to.be.an('object');
+    expect(result).to.be.empty;
   });
 });
