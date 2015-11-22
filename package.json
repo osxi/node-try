@@ -2,7 +2,7 @@
   "name": "node-try",
   "version": "0.1.0",
   "description": "Try for Node, based on Ruby's try",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register -c -s 2"
   },
