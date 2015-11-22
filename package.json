@@ -1,6 +1,6 @@
 {
   "name": "node-try",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Try for Node, based on Ruby's try",
   "main": "index.js",
   "scripts": {
