@@ -9,6 +9,12 @@ var fooBarObject = {
 
 var emptyObject = {};
 
+var objectWithMethod = {
+  foo: function() {
+    return 'foo';
+  }
+};
+
 describe('node-try', function() {
   it('returns request if it exists', function() {
     expect(fooBarObject.foo.nodeTry('bar')).to.eql(true);
@@ -27,5 +33,9 @@ describe('node-try', function() {
 
     expect(result).to.be.an('object');
     expect(result).to.be.empty;
+  });
+
+  it('evaluates a function when tried', function() {
+    expect(objectWithMethod.nodeTry('foo')).to.eql('foo');
   });
 });
