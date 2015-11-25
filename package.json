@@ -4,7 +4,7 @@
   "description": "Try for Node, based on Ruby's try",
   "main": "dist/index.js",
   "scripts": {
-    "build": "browserify index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "browserify index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ] -p [minifyify --no-map]",
     "prebublish": "npm run build",
     "test": "mocha --compilers js:babel-core/register -c -s 2"
   },
@@ -31,6 +31,7 @@
     "browserify": "^12.0.1",
     "chai": "^3.4.1",
     "lodash": "^3.10.1",
+    "minifyify": "^7.1.0",
     "mocha": "^2.3.4"
   }
 }
