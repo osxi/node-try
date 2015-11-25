@@ -6,7 +6,7 @@
   "scripts": {
     "build": "browserify index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ] -p [minifyify --no-map]",
     "prebublish": "npm run build",
-    "test": "mocha --compilers js:babel-core/register -c -s 2"
+    "test": "mocha --compilers js:babel-register -c -s 2"
   },
   "repository": {
     "type": "git",
