@@ -16,7 +16,7 @@ var opts = {
 
 Object.defineProperty(Object.prototype, 'nodeTry', opts);
 
-},{"./lib/node-try":2,"babel-core/register":4}],2:[function(require,module,exports){
+},{"./lib/node-try":2,"babel-core/register":3}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42,6 +42,10 @@ var _lodash = require('lodash');
 ;
 
 },{"lodash":5}],3:[function(require,module,exports){
+// TODO: eventually deprecate this console.trace("use the `babel-register` package instead of `babel-core/register`");
+module.exports = require("babel-register");
+
+},{"babel-register":4}],4:[function(require,module,exports){
 // required to safely use babel/register within a browserify codebase
 
 "use strict";
@@ -51,11 +55,7 @@ exports.__esModule = true;
 exports["default"] = function () {};
 
 module.exports = exports["default"];
-},{}],4:[function(require,module,exports){
-// TODO: eventually deprecate this console.trace("use the `babel-register` package instead of `babel-core/register`");
-module.exports = require("babel-register");
-
-},{"babel-register":3}],5:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 (function (global){
 /**
  * @license

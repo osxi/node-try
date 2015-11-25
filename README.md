@@ -12,7 +12,7 @@ Import the nodeTry method:
 import nodeTry from 'node-try';
 ```
 
-Then you can access object properties via dot notation without throwing an exception by using `#nodeTry` as the getter. 
+Then you can access object properties via dot notation without throwing an exception by using `#nodeTry` as the getter.
 
 For example, given the following object of:
 
@@ -22,9 +22,15 @@ var stuff = {
 };
 ```
 
-You then have access to `foo` via `stuff.nodeTry('foo')`. 
+You then have access to `foo` via `stuff.nodeTry('foo')`.
 
 If you were to write `stuff.nodeTry('notFoo')`, an empty object would be returned.
+
+## Development
+
+Run `npm run build` to build to `dist/index.js` (entry point for this package).
+
+Note: `npm run build` is automatically run via the `prepublish` hook as per package.json.
 
 ## Further Reading
   - See the [tests](https://github.com/osxi/node-try/blob/master/test/node-try-test.js).
