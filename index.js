@@ -1,6 +1,6 @@
 'use strict';
 
-require('babel-core/register');
+require('babel-register');
 
 import nodeTry from './lib/node-try';
 
