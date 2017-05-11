@@ -1,6 +1,4 @@
-# node-try [![Build Status](https://travis-ci.org/osxi/node-try.svg?branch=master)](https://travis-ci.org/osxi/node-try) [![devDependency Status](https://david-dm.org/osxi/node-try/dev-status.svg)](https://david-dm.org/osxi/node-try#info=devDependencies)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/osxi/node-try.svg)](https://greenkeeper.io/)
+# node-try [![Build Status](https://travis-ci.org/osxi/node-try.svg?branch=master)](https://travis-ci.org/osxi/node-try) [![devDependency Status](https://david-dm.org/osxi/node-try/dev-status.svg)](https://david-dm.org/osxi/node-try#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/osxi/node-try.svg)](https://greenkeeper.io/)
 
 `npm install node-try`
 
